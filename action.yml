@@ -1,0 +1,15 @@
+name: Cargo Release Action
+description: Create binary package releases from Rust Cargo projects.
+
+inputs:
+  workspace:
+    required: false
+    description: The path to the workspace directory.
+
+outputs:
+  archives-dir:
+    description: The path to the directory containing the created archives.
+
+runs:
+  using: node16
+  main: index.js
